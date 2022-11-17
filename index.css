@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --orange:#ffa500;
+    --dark: #333;
+    --white: #fff;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    list-style: none;
+    transition: .75s ease-in;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+header nav ::selection {
+    background-color: var(--orange);
+    color: var(--white);
+}
+header nav {
+    padding: 0 20px;
+    width: 100%;
+    height: 70px;
+    background-color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    font-size: 1.23rem;
+}
+header nav #menu-bar {
+    border: 2px solid var(--white);
+    padding: 5px;
+    border-radius: 4px;
+}
+header a {
+    text-transform: uppercase;
+    color: var(--white);
+}
+header a::first-letter {
+    color: var(--orange);
+}
+header nav ul {
+    display: none;
+}
+header .contain {
+    width: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .contain i {
+    cursor: pointer;
+    transition: .4s;
+}
+header nav #menu-bar:hover
+,header nav ul li a:hover,
+header .contain i:hover {
+    color: var(--orange);
+}
+header section.stuff #form {
+    background-color: var(--dark);
+    width: 100%;
+    border-top: 2px solid #c0c0c0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--white);
+    transition: .45s;
+}
+header section.stuff #form input{
+    width: 80%;
+    height: 80%;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+header section.stuff #form i {
+    cursor: pointer;
+}
+header section.stuff section.login {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.685);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header section.stuff section.login #loginForm {
+    width: 90%;
+    max-width: 600px;
+    height: 400px;
+    background-color: var(--white);
+    border-radius: 5px;
+    color: #000;
+    display: block;
+    padding-top: 15px;
+}
+/* header section.stuff section.login #loginForm i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+} */
+header section.stuff section.login #loginForm .tx {
+    height: 10%;
+    text-align: center;
+}
+header section.stuff section.login #loginForm .tx h2 {
+    text-transform: uppercase;
+}
+header section.stuff section.login #loginForm .container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+header section.stuff section.login #loginForm .container input,
+header section.stuff section.login #loginForm .container button  {
+    width: 80%;
+    height: 50px;
+    padding: 5px;
+    border: 2px solid var(--dark);
+    border-radius: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+header section.stuff section.login #loginForm .container button {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+}
+header section.stuff section.login #loginForm .radio {
+    padding-left: 10px;
+    width: 100%;
+    height: calc(100% - 50% - 10% - 15px);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 1rem;
+}
+header section.stuff section.login #loginForm .radio div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 120px;
+}
+header section.stuff section.login #loginForm .radio div input {
+    cursor: pointer;
+}
+header section.stuff section.login #loginForm .radio p a {
+    color: var(--orange);
+}
+header section.stuff section.login #loginForm .radio p a:hover {
+    text-decoration: underline;
+}
+
+header section.stuff #form input{
+    width: 90%;
+}
+
+@media screen and (min-width: 600px) {
+    header section.stuff #form input{
+        width: 90%;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    header a.headerlink {
+        font-size: 1.5rem;
+    }
+    header nav {
+        padding: 0 50px;
+    }
+    
+    header nav #menu-bar {
+        display: none;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li {
+        display: inline;
+    }
+    header nav ul li a {
+        text-transform: capitalize;
+        margin: 0 .5rem;
+        transition: .4s;
+    }
+    header .contain {
+        width: 100px;
+    }
+}
