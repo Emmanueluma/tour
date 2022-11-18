@@ -32,6 +32,17 @@
                     <input type="search" name="search" id="search" placeholder="search here...">
                     <label for="search"><i class="fas fa-search" ></i></label>
                 </form>
+                <section class="ul" id="ul">
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#book">book</a></li>
+                        <li><a href="#package">package</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#gallery">gallery</a></li>
+                        <li><a href="#review">review</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </section>
                 <section class="login" id="loginSection">
                     <form id="loginForm" action="#" method="get">
                         <i class="fas fa-times" id="search-btn1"></i>
@@ -51,9 +62,60 @@
                     </form>
                 </section>
             </section>
-        <section class="main"></section>
+        <section class="main" id="home">
+            <section class="text">
+                <div class="gra"></div>
+                <video id="videoBg" autoplay loop muted src="images/vid-1.mp4"></video>
+                <div class="one">
+                    <h1>adventure is worthwhile</h1>
+                    <p>discover new places with us,adventure awaits</p>
+                    <button>discover more</button>
+                </div>
+                <div class="two">
+                    <div class="container">
+                        <div id="one"></div>
+                        <div id="two"></div>
+                        <div id="third"></div>
+                        <div id="fourth"></div>
+                        <div id="fifth"></div>
+                    </div>
+                </div>
+            </section>
+        </section>
     </header>
-    <main></main>
+    <main>
+        <section class="book" id="book">
+            <div class="header">
+                <p><span>b</span><span>o</span><span>o</span><span>k</span> <span class="n">n</span><span>o</span><span>w</span></p>
+            </div>
+            <div class="main">
+                <div class="img">
+                    <img src="images/book-img.svg" alt="an adventure in sight by a woman">
+                </div>
+                <div class="smi">
+                    <form action="#">
+                        <div>
+                            <label for="place">where to</label>
+                            <input type="text" placeholder="search place" required>
+                        </div>
+                        <div>
+                            <label for="place">how many</label>
+                            <input type="text" placeholder="number of guest" required>
+                        </div>
+                        <div>
+                            <label for="place">arrivals</label>
+                            <input type="date" required>
+                        </div>
+                        <div>
+                            <label for="place">leaving</label>
+                            <input type="date" required>
+                        </div>
+                        <button type="submit">book now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
     <script src="./brain.js"></script>
 </body>

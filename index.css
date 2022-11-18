@@ -4,6 +4,7 @@
     --orange:#ffa500;
     --dark: #333;
     --white: #fff;
+    --lightOrange: #ffa60079;
 }
 
 * {
@@ -17,6 +18,7 @@
     text-transform: capitalize;
     list-style: none;
     transition: .75s ease-in;
+    /* overflow-x: hidden; */
 }
 html {
     scroll-behavior: smooth;
@@ -25,6 +27,10 @@ html {
 body {
     width: 100%;
     height: auto;
+}
+header {
+    background-color: var(--dark);
+    position: relative;
 }
 header nav ::selection {
     background-color: var(--orange);
@@ -40,6 +46,8 @@ header nav {
     align-items: center;
     color: var(--white);
     font-size: 1.23rem;
+    z-index: 1000;
+    position: fixed;
 }
 header nav #menu-bar {
     border: 2px solid var(--white);
@@ -71,6 +79,47 @@ header nav #menu-bar:hover
 header .contain i:hover {
     color: var(--orange);
 }
+header section.stuff {
+    position: relative;
+}
+header section.stuff section.ul {
+    background-color: var(--dark);
+    width: 100%;
+    height: 50vh;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 2px solid var(--white);
+    top: 70px;
+    position: fixed;
+    opacity: 0;
+    z-index: 1000;
+}
+header section.stuff section.ul ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+header section.stuff section.ul ul li {
+    border-radius: 5px;
+    background-color: #000;
+    width: 90%;
+    height: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+}
+header section.stuff section.ul ul li a{
+    color: var(--white);
+    width: 100%;
+    height: 80%;
+}
+header section.stuff section.ul ul li a::first-letter {
+    color: var(--white);
+}
 header section.stuff #form {
     background-color: var(--dark);
     width: 100%;
@@ -81,18 +130,25 @@ header section.stuff #form {
     font-size: 1.4rem;
     color: var(--white);
     transition: .45s;
+    z-index: 1000;
+    position: fixed;
+    top: 70px;
 }
 header section.stuff #form input{
-    width: 80%;
+    width: 90%;
     height: 80%;
     border-radius: 7px;
     padding: 5px;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 header section.stuff #form i {
     cursor: pointer;
 }
-header section.stuff section.login {
+/* header section.stuff {
+    position: fixed;
+
+} */
+header section.stuff #loginSection {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.685);
@@ -102,8 +158,11 @@ header section.stuff section.login {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+    opacity: 0;
 }
-header section.stuff section.login #loginForm {
+
+header section.stuff #loginSection #loginForm {
     width: 90%;
     max-width: 600px;
     height: 400px;
@@ -113,22 +172,22 @@ header section.stuff section.login #loginForm {
     display: block;
     padding-top: 15px;
 }
-/* header section.stuff section.login #loginForm i {
+header section.stuff #loginSection #loginForm i {
     position: absolute;
     top: 20px;
     right: 20px;
     color: var(--white);
     font-size: 2rem;
     cursor: pointer;
-} */
-header section.stuff section.login #loginForm .tx {
+} 
+header section.stuff #loginSection #loginForm .tx {
     height: 10%;
     text-align: center;
 }
-header section.stuff section.login #loginForm .tx h2 {
+header section.stuff #loginSection #loginForm .tx h2 {
     text-transform: uppercase;
 }
-header section.stuff section.login #loginForm .container {
+header section.stuff #loginSection #loginForm .container {
     width: 100%;
     height: 50%;
     display: flex;
@@ -136,8 +195,8 @@ header section.stuff section.login #loginForm .container {
     align-items: center;
     flex-direction: column;
 }
-header section.stuff section.login #loginForm .container input,
-header section.stuff section.login #loginForm .container button  {
+header section.stuff #loginSection #loginForm .container input,
+header section.stuff #loginSection #loginForm .container button  {
     width: 80%;
     height: 50px;
     padding: 5px;
@@ -146,12 +205,12 @@ header section.stuff section.login #loginForm .container button  {
     font-size: 1rem;
     cursor: pointer;
 }
-header section.stuff section.login #loginForm .container button {
+header section.stuff #loginSection #loginForm .container button {
     background-color: var(--orange);
     color: var(--white);
     border: none;
 }
-header section.stuff section.login #loginForm .radio {
+header section.stuff #loginSection #loginForm .radio {
     padding-left: 10px;
     width: 100%;
     height: calc(100% - 50% - 10% - 15px);
@@ -161,29 +220,221 @@ header section.stuff section.login #loginForm .radio {
     flex-direction: column;
     font-size: 1rem;
 }
-header section.stuff section.login #loginForm .radio div {
+header section.stuff #loginSection #loginForm .radio div {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 120px;
 }
-header section.stuff section.login #loginForm .radio div input {
+header section.stuff #loginSection #loginForm .radio div input {
     cursor: pointer;
 }
-header section.stuff section.login #loginForm .radio p a {
+header section.stuff #loginSection #loginForm .radio p a {
     color: var(--orange);
 }
-header section.stuff section.login #loginForm .radio p a:hover {
+header section.stuff #loginSection #loginForm .radio p a:hover {
     text-decoration: underline;
 }
-
-header section.stuff #form input{
-    width: 90%;
+header section.main {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    position: relative;
 }
+header section.main section.text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+header section.main section.text div.gra {
+    position: absolute;
+    background-color: rgba(15, 109, 146, 0.103);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+}
+header section.main section.text video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%,-50%);
+}
+header section.main section.text .one {
+    width: 100%;
+    height: 70%;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+    z-index: 600;
+    color: var(--white);
+} 
+header section.main section.text .one h1 {
+    font-size: 3.4rem;
+}
+header section.main section.text .one p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+header section.main section.text .one button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border: 2px solid var(--orange);
+    background-color: var(--orange);
+    border-radius: 2px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+header section.main section.text .one button:hover {
+    background-color: var(--lightOrange);
+}
+header section.main section.text .two {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 600;
+}
+header section.main section.text .two div.container {
+    width: 200px;
+    height: 40px;
+    background-color: var(--dark);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    transition: 0.1s;
+}
+header section.main section.text .two div.container div {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+header section.main section.text .two div.container div.active {
+    background-color: var(--orange);
+}
+main {
+    width: 100%;
+    height: auto;
+}
+main section {
+    padding-top: 10px;
+}
+main section .header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main section .header p {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+main section .header p span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    color: var(--orange);
+    background-color: var(--lightOrange);
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+main section .header p span.n {
+    margin-left: 3vw;
+}
+main section.book div.main {
+    width: 100%;
+    height: 85vh;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main section.book div.main div.img {
+    width: 100%;
+    height: 50%;
+}
+main section.book div.main div.smi {
+    width: 100%;
+    height: 50vh;
+    padding-bottom: 10px;
+}
+main section.book div.main div img {
+    width: 100%;
+    height: 100%;
+}
+main section.book div.main form {
+    padding: 0 15px;
+}
+main section.book div.main div form div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+main section.book div.main div form div label {
+    font-size: 1.1rem;
+    color: #000;
+}
+main section.book div.main div form div input {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    border: 2px solid rgba(51, 51, 51, 0.397);
+    border-radius: 5px;
+}
+main section.book div.main div form button {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: .7rem 2rem;
+    margin-top: 5px;
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 600px) {
     header section.stuff #form input{
         width: 90%;
+    }
+    main section .header p {
+        width: 30%;
+    }
+    main section.book div.main {
+        flex-direction: row;
     }
 }
 
@@ -212,5 +463,8 @@ header section.stuff #form input{
     }
     header .contain {
         width: 100px;
+    }
+    main section .header p {
+        width: 20%;
     }
 }
