@@ -385,6 +385,7 @@ main section.book div.main {
 }
 main section.book div.main div {
     min-width: 100%;
+    min-height: 90%;
 }
 main section.book div.main div.img {
     width: 50%;
@@ -394,6 +395,9 @@ main section.book div.main div.smi {
     width: 40%;
     height: 50%;
     padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 main section.book div.main div img {
     width: 100%;
@@ -680,7 +684,85 @@ main section.review div.container section.box div.container1 section i {
 
 
 
+main section.contact {
+    padding-bottom: 50px;
+    box-shadow: 0 10px 10px #f1eded;
+}
+main section.contact div.main {
+    width: 100%;
+    height: auto;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main section.contact div.main div {
+    min-width: 100%;
+    min-height: 90%;
+}
+main section.contact div.main div.img {
+    width: 50%;
+    height: 60%;
 
+}
+main section.contact div.main div.smi {
+    width: 40%;
+    height: 50%;
+    padding-bottom: 10px;
+}
+main section.contact div.main div img {
+    width: 100%;
+    height: 100%;
+}
+main section.contact div.main form {
+    width: 100%;
+    padding: 0 15px;
+}
+main section.contact div.main div form section{
+    padding: 0;/* 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; */
+}
+main section.contact div.main div form div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+main section.contact div.main div form div label {
+    font-size: 1.1rem;
+    color: #000;
+}
+main section.contact div.main div form div input {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+main section.contact div.main div form div textarea {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+}
+main section.contact div.main div form button {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: .7rem 2rem;
+    margin-top: 5px;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    border: 2px solid var(--orange);
+}
+main section.contact div.main div form button:hover {
+    background-color: var(--lightOrange);
+}
 
 
 
@@ -758,10 +840,16 @@ main section.review div.container section.box div.container1 section i {
         justify-content: center;
         align-items: center;
     }
-    /* main section.book div.main div form div input {
-        width: 100%;
-    } */
+    main section.contact div.main {
+        height: 70vh;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
     main section.book div.main div {
+        min-width: 50%;
+    }
+    main section.contact div.main div {
         min-width: 50%;
     }
     
@@ -847,6 +935,15 @@ main section.review div.container section.box div.container1 section i {
     main section .header p {
         width: 20%;
     }
+    main section.contact div.main div form section{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    main section.contact div.main div form div input {
+        width: 98%;
+    }
+    
 }
 
 @media screen and (min-width: 1080px) {
