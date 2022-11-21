@@ -5,6 +5,7 @@
     --dark: #333;
     --white: #fff;
     --lightOrange: #ffa60079;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.2);
 }
 
 * {
@@ -18,6 +19,7 @@
     text-transform: capitalize;
     list-style: none;
     transition: .75s ease-in;
+    scroll-margin-top: 4rem;
     /* overflow-x: hidden; */
 }
 html {
@@ -27,6 +29,9 @@ html {
 body {
     width: 100%;
     height: auto;
+}
+button {
+    cursor: pointer;
 }
 header {
     background-color: var(--dark);
@@ -337,7 +342,8 @@ main {
     height: auto;
 }
 main section {
-    padding-top: 10px;
+    width: 100%;
+    padding-top: 20px;
 }
 main section .header {
     text-align: center;
@@ -352,19 +358,19 @@ main section .header p {
     width: 70%;
 }
 main section .header p span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 30px;
-    height: 30px;
+    padding: .1rem .2rem;
     color: var(--orange);
     background-color: var(--lightOrange);
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     border-radius: 5px;
+    font-weight: 650;
 }
 main section .header p span.n {
     margin-left: 3vw;
+}
+main section.book {
+    padding-bottom: 50px;
+    box-shadow: 0 10px 10px #f1eded;
 }
 main section.book div.main {
     width: 100%;
@@ -376,12 +382,12 @@ main section.book div.main {
     flex-direction: column;
 }
 main section.book div.main div.img {
-    width: 100%;
+    width: 50%;
     height: 50%;
 }
 main section.book div.main div.smi {
-    width: 100%;
-    height: 50vh;
+    width: 40%;
+    height: 50%;
     padding-bottom: 10px;
 }
 main section.book div.main div img {
@@ -414,6 +420,193 @@ main section.book div.main div form button {
     padding: .7rem 2rem;
     margin-top: 5px;
     font-size: 1.1rem;
+    border-radius: 3px;
+    border: 2px solid var(--orange);
+}
+main section.book div.main div form button:hover {
+    background-color: var(--lightOrange);
+}
+main section.package {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    box-shadow: 0 10px 10px #f1eded;
+}
+main section.package .header p span {
+    margin: 0 3px;
+    padding: 9px;
+}
+main section.package section.main {
+    display: grid;
+    grid-template-columns: 337px;
+    grid-template-rows: repeat(6,500px);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+main section.package section.main div.container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+}
+main section.package section.main div.container div {
+    width: 100%;
+    height: 50%;
+}
+main section.package section.main div.container div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+main section.package section.main div.container .txt {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+main section.package section.main div.container .txt i {
+    color: var(--orange);
+}
+main section.package section.main div.container .txt h3 {
+    font-size: 1.4rem;
+}
+main section.package section.main div.container .txt p {
+    font-size: 1.2rem;
+    color: #000;
+}
+main section.package section.main div.container .txt p del{
+    text-decoration: line-through;
+    font-size: 1.1rem;
+    color: rgb(143, 133, 133);
+}
+main section.package section.main div.container .txt button {
+    padding: 1rem 2rem;
+    background-color: var(--orange);
+    color: var(--white);
+    border: 2px solid var(--orange);
+}
+main section.package section.main div.container .txt button:hover {
+    background-color: var(--lightOrange);
+}
+main section.services {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    box-shadow: 0 10px 10px #f1eded;
+}
+main section.services .header p span {
+    margin: 0 3px;
+    padding: 9px;
+}
+main section.services section.main {
+    display: grid;
+    grid-template-columns: 337px;
+    grid-template-rows: repeat(6,280px);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+main section.services section.main div.text {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .47s;
+}
+main section.services section.main div.text:hover {
+    background-color: var(--white);
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .1);
+}
+main section.services section.main div.text i {
+    font-size: 4rem;
+    color: var(--orange);
+}
+main section.services section.main div.text h3 {
+    font-size: 1.7rem;
+}
+main section.gallery {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    box-shadow: 0 10px 10px #f1eded;
+}
+main section.gallery .header p span {
+    margin: 0 3px;
+    padding: 9px;
+}
+main section.gallery section.main {
+    display: grid;
+    grid-template-columns: 337px;
+    grid-template-rows: repeat(6,250px);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+main section.gallery section.main div.box {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .47s;
+    position: relative;
+    border: .7rem solid var(--white);
+    box-shadow: 0 0 3px 3px rgba(31, 30, 30, 0.1);
+}
+main section.gallery section.main div.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main section.gallery section.main div.box div.ab {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1f1f1f8a;
+    height: 0%;
+    opacity: 0;
+    transition: .45s;
+    color: var(--white);
+}
+main section.gallery section.main div.box:hover div.ab {
+    opacity: 1;
+    height: 100%;
+}
+main section.gallery section.main div.box div.ab h2 {
+    color: var(--orange);
+}
+main section.gallery section.main div.box div.ab button {
+    padding: 1rem 2rem;
+    background-color: var(--orange);
+    color: var(--white);
+    border: 2px solid var(--orange);
+}
+main section.gallery section.main div.box div.ab button:hover {
+    background-color: var(--lightOrange);
+}
+main section.review .header p span {
+    margin: 0 3px;
+    padding: 9px;
 }
 
 
@@ -421,6 +614,65 @@ main section.book div.main div form button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 346px) {
+    main section.package section.main {
+        display: grid;
+        grid-template-columns: 90%;
+    }
+    main section.services section.main {
+        display: grid;
+        grid-template-columns: 90%;
+    }
+    main section.gallery section.main {
+        display: grid;
+        grid-template-columns: 90%;
+    }
+}
 
 
 
@@ -434,10 +686,60 @@ main section.book div.main div form button {
         width: 30%;
     }
     main section.book div.main {
+        height: 70vh;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    main section.package section.main div.container {
+        width: 100%;
+    }
+    main section.services section.main div.text {
+        width: 100%;
+    }
+    main section.gallery section.main div.text {
+        width: 100%;
     }
 }
 
+@media screen and (min-width: 730px) {
+    main section.package {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    }
+    main section.package section.main {
+        display: grid;
+        grid-template-columns: repeat(2, 337px);
+        grid-template-rows: repeat(3, 500px);
+    }
+    main section.services {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    main section.services section.main {
+        display: grid;
+        grid-template-columns: repeat(2, 337px);
+        grid-template-rows: repeat(3, 280px);
+    }
+    main section.gallery {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    main section.gallery section.main {
+        display: grid;
+        grid-template-columns: repeat(2, 337px);
+        grid-template-rows: repeat(3, 250px);
+    }
+}
 
 @media screen and (min-width: 900px) {
     header a.headerlink {
@@ -466,5 +768,38 @@ main section.book div.main div form button {
     }
     main section .header p {
         width: 20%;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    main section.package section.main {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 337px);
+        grid-template-rows: repeat(2, 500px);
+    }
+    main section.services section.main {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 337px);
+        grid-template-rows: repeat(2, 280px);
+    }
+    main section.gallery section.main {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 337px);
+        grid-template-rows: repeat(2, 250px);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    main section.package section.main {
+        grid-template-columns: repeat(3, 367px);
+    }
+    main section.services section.main {
+        grid-template-columns: repeat(3, 337px);
+    }
+    main section.gallery section.main {
+        grid-template-columns: repeat(3, 400px);
     }
 }

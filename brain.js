@@ -40,6 +40,7 @@ loginForm.style.height = '0px';
 loginForm.style.opacity = 0;
 mainLoginForm.style.display = "none";
 
+
 loginBtn.addEventListener('click', e => {
     let height = loginForm.style.height;
     if (height == '0px') {
@@ -47,7 +48,7 @@ loginBtn.addEventListener('click', e => {
         loginForm.style.opacity = 1;
         mainLoginForm.style.display = "block";
         searchBtn1.addEventListener('click', e => {
-            loginForm.style.height = '0px';
+        loginForm.style.height = '0px';
         loginForm.style.opacity = 0;
         mainLoginForm.style.display = "none";
         });
