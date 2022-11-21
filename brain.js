@@ -74,6 +74,8 @@ menuBar.addEventListener('click', e => {
         ul.style.opacity = 1;
     }
 })
+
+
 v1.classList.add('active');
 vi(v1,1);
 vi(v2,2);

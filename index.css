@@ -36,8 +36,10 @@ button {
 header {
     background-color: var(--dark);
     position: relative;
+    padding-top: 70px;
+    background-color: white;
 }
-header nav ::selection {
+*::selection {
     background-color: var(--orange);
     color: var(--white);
 }
@@ -53,6 +55,8 @@ header nav {
     font-size: 1.23rem;
     z-index: 1000;
     position: fixed;
+    top: 0;
+    left: 0;
 }
 header nav #menu-bar {
     border: 2px solid var(--white);
@@ -242,7 +246,7 @@ header section.stuff #loginSection #loginForm .radio p a:hover {
 }
 header section.main {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 70px);
     background-color: transparent;
     position: relative;
 }
@@ -364,9 +368,7 @@ main section .header p span{
     font-size: 2.3rem;
     border-radius: 5px;
     font-weight: 650;
-}
-main section .header p span.n {
-    margin-left: 3vw;
+    margin-left: 3px;
 }
 main section.book {
     padding-bottom: 50px;
@@ -374,12 +376,15 @@ main section.book {
 }
 main section.book div.main {
     width: 100%;
-    height: 85vh;
+    height: auto;
     background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+main section.book div.main div {
+    min-width: 100%;
 }
 main section.book div.main div.img {
     width: 50%;
@@ -395,6 +400,7 @@ main section.book div.main div img {
     height: 100%;
 }
 main section.book div.main form {
+    width: 100%;
     padding: 0 15px;
 }
 main section.book div.main div form div{
@@ -433,7 +439,7 @@ main section.package {
 }
 main section.package .header p span {
     margin: 0 3px;
-    padding: 9px;
+    padding: 3px 9px;
 }
 main section.package section.main {
     display: grid;
@@ -501,7 +507,7 @@ main section.services {
 }
 main section.services .header p span {
     margin: 0 3px;
-    padding: 9px;
+    padding: 3px 9px;
 }
 main section.services section.main {
     display: grid;
@@ -543,12 +549,12 @@ main section.gallery {
 }
 main section.gallery .header p span {
     margin: 0 3px;
-    padding: 9px;
+    padding: 3px 9px;
 }
 main section.gallery section.main {
     display: grid;
     grid-template-columns: 337px;
-    grid-template-rows: repeat(6,250px);
+    grid-template-rows: repeat(9,250px);
     grid-gap: 20px;
     justify-content: center;
     align-items: center;
@@ -606,12 +612,70 @@ main section.gallery section.main div.box div.ab button:hover {
 }
 main section.review .header p span {
     margin: 0 3px;
-    padding: 9px;
+    padding: 3px 9px;
 }
-
-
-
-
+main section.review div.container {
+    width: 90%;
+    height: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    gap: 20px;
+}
+main section.review div.container section.box {
+    min-width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0 3px 5px rgba(0, 0, 0, .1);
+}
+main section.review div.container section.box div.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+main section.review div.container section.box div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+main section.review div.container section.box  .img {
+    padding: 10px;
+    height: 40%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main section.review div.container section.box  .img img {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+}
+main section.review div.container section.box div.container1 {
+    height: 60%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main section.review div.container section.box div.container1 section i {
+    color: var(--orange);
+}
 
 
 
@@ -672,6 +736,9 @@ main section.review .header p span {
         display: grid;
         grid-template-columns: 90%;
     }
+    main section.review div.container section.box {
+        min-width: 290px;
+    }
 }
 
 
@@ -691,6 +758,13 @@ main section.review .header p span {
         justify-content: center;
         align-items: center;
     }
+    /* main section.book div.main div form div input {
+        width: 100%;
+    } */
+    main section.book div.main div {
+        min-width: 50%;
+    }
+    
     main section.package section.main div.container {
         width: 100%;
     }
@@ -700,9 +774,13 @@ main section.review .header p span {
     main section.gallery section.main div.text {
         width: 100%;
     }
+    main section.review div.container section.box {
+        min-width: 380px; 
+    }
 }
 
 @media screen and (min-width: 730px) {
+
     main section.package {
     width: 100%;
     display: flex;
@@ -737,7 +815,7 @@ main section.review .header p span {
     main section.gallery section.main {
         display: grid;
         grid-template-columns: repeat(2, 337px);
-        grid-template-rows: repeat(3, 250px);
+        grid-template-rows: repeat(4, 250px);
     }
 }
 
@@ -788,7 +866,7 @@ main section.review .header p span {
         width: 90%;
         display: grid;
         grid-template-columns: repeat(3, 337px);
-        grid-template-rows: repeat(2, 250px);
+        grid-template-rows: repeat(3, 250px);
     }
 }
 
