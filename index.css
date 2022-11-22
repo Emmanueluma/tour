@@ -18,7 +18,7 @@
     outline: none;
     text-transform: capitalize;
     list-style: none;
-    transition: .75s ease-in;
+    transition: .45s ease-in;
     scroll-margin-top: 4rem;
     /* overflow-x: hidden; */
 }
@@ -142,6 +142,7 @@ header section.stuff #form {
     z-index: 1000;
     position: fixed;
     top: 70px;
+    opacity: 0;
 }
 header section.stuff #form input{
     width: 90%;
@@ -153,10 +154,6 @@ header section.stuff #form input{
 header section.stuff #form i {
     cursor: pointer;
 }
-/* header section.stuff {
-    position: fixed;
-
-} */
 header section.stuff #loginSection {
     width: 100%;
     height: 100%;
@@ -170,7 +167,6 @@ header section.stuff #loginSection {
     z-index: 1000;
     opacity: 0;
 }
-
 header section.stuff #loginSection #loginForm {
     width: 90%;
     max-width: 600px;
@@ -247,6 +243,7 @@ header section.stuff #loginSection #loginForm .radio p a:hover {
 header section.main {
     width: 100%;
     height: calc(100vh - 70px);
+    min-height: 350px;
     background-color: transparent;
     position: relative;
 }
@@ -293,7 +290,7 @@ header section.main section.text .one {
     color: var(--white);
 } 
 header section.main section.text .one h1 {
-    font-size: 2rem;
+    font-size: 3.4rem;
 }
 header section.main section.text .one p {
     font-size: 1.4rem;
@@ -362,7 +359,7 @@ main section .header p {
     width: 70%;
 }
 main section .header p span{
-    padding: .1rem .2rem;
+    padding: 3px 3px;
     color: var(--orange);
     background-color: var(--lightOrange);
     font-size: 2.3rem;
@@ -444,10 +441,6 @@ main section.package {
     padding-bottom: 50px;
     box-shadow: 0 10px 10px #f1eded;
 }
-main section.package .header p span {
-    margin: 0 3px;
-    padding: 3px 9px;
-}
 main section.package section.main {
     display: grid;
     grid-template-columns: 337px;
@@ -512,10 +505,6 @@ main section.services {
     padding-bottom: 50px;
     box-shadow: 0 10px 10px #f1eded;
 }
-main section.services .header p span {
-    margin: 0 3px;
-    padding: 3px 9px;
-}
 main section.services section.main {
     display: grid;
     grid-template-columns: 337px;
@@ -553,10 +542,6 @@ main section.gallery {
     padding-top: 20px;
     padding-bottom: 50px;
     box-shadow: 0 10px 10px #f1eded;
-}
-main section.gallery .header p span {
-    margin: 0 3px;
-    padding: 3px 9px;
 }
 main section.gallery section.main {
     display: grid;
@@ -617,10 +602,6 @@ main section.gallery section.main div.box div.ab button {
 main section.gallery section.main div.box div.ab button:hover {
     background-color: var(--lightOrange);
 }
-main section.review .header p span {
-    margin: 0 3px;
-    padding: 3px 9px;
-}
 main section.review div.container {
     width: 90%;
     height: 400px;
@@ -631,6 +612,8 @@ main section.review div.container {
     align-items: center;
     overflow-x: scroll;
     gap: 20px;
+    scroll-snap-type: x mandatory;
+    transition: .75s;
 }
 main section.review div.container section.box {
     min-width: 100%;
@@ -643,6 +626,7 @@ main section.review div.container section.box {
     padding: 0;
     margin: 0;
     box-shadow: 0 0 3px 5px rgba(0, 0, 0, .1);
+    scroll-snap-align: center;
 }
 main section.review div.container section.box div.container {
     display: flex;
@@ -719,10 +703,7 @@ main section.contact div.main form {
     padding: 0 15px;
 }
 main section.contact div.main div form section{
-    padding: 0;/* 
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; */
+    padding: 0;
 }
 main section.contact div.main div form div{
     display: flex;
@@ -777,6 +758,7 @@ footer section.sp {
     margin: 0 auto;
     overflow-x: scroll;
     overflow-y: hidden;
+    display: none;
 }
 footer section.sp div {
     min-width: 200px;
@@ -798,14 +780,19 @@ footer section.main {
     grid-template-columns: 337px;
     grid-template-rows: repeat(5, 200px);
     justify-content: center;
-    align-items: flex-start;
+    align-items: start;
     padding-top: 30px;
     grid-gap: 10px;
+    transition: .2s;
 }
 footer section.main div {
     width: 100%;
     height: 100%;
     color: var(--white);
+}
+footer section.main div h2 {
+    font-size: 1.8rem;
+    color: var(--orange);
 }
 footer section.main div a {
     color: var(--white);
@@ -813,9 +800,6 @@ footer section.main div a {
 }
 footer section.main div a:hover {
     color: var(--orange);
-}
-footer section.main div h2 {
-    font-size: 1.5rem;
 } 
 footer section.main div p span {
     color: var(--orange);
@@ -834,49 +818,11 @@ footer section.main div hr {
     border-radius: 4px;
     margin-bottom: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 346px) {
+/* media screen for  screen below 346px */
+@media screen and (min-width:0px) and (max-width: 346px) {
+    header section.main section.text .one h1 {
+        font-size: 2.4rem;
+    }
     main section.package section.main {
         display: grid;
         grid-template-columns: 90%;
@@ -892,13 +838,22 @@ footer section.main div hr {
     main section.review div.container section.box {
         min-width: 290px;
     }
+    footer section.main {
+        display: grid;
+        grid-template-columns: 90%;
+    }
 }
-
-
-
-
-
+/* media screen for  screen below 350px */
+@media screen and (min-width: 350px) {
+    main section .header p span{
+        padding: 3px 9px;
+    }
+}
+/* media screen for  screen below 600px */
 @media screen and (min-width: 600px) {
+    main section .header p span{
+        padding: 3px 9px;
+    }
     header section.stuff #form input{
         width: 90%;
     }
@@ -937,11 +892,8 @@ footer section.main div hr {
         min-width: 380px; 
     }
 }
-
+/* media screen for  screen below 730px */
 @media screen and (min-width: 730px) {
-    header section.main section.text .one h1 {
-        font-size: 3.4rem;
-    }
     main section.package {
     width: 100%;
     display: flex;
@@ -988,7 +940,7 @@ footer section.main div hr {
     grid-column: span 2;
     }
 }
-
+/* media screen for  screen below 900px */
 @media screen and (min-width: 900px) {
     header a.headerlink {
         font-size: 1.5rem;
@@ -1027,7 +979,7 @@ footer section.main div hr {
     }
     
 }
-
+/* media screen for  screen below 1080px */
 @media screen and (min-width: 1080px) {
     main section.package section.main {
         width: 90%;
@@ -1051,13 +1003,13 @@ footer section.main div hr {
         display: grid;
         grid-template-columns:repeat(4, 337px);
         grid-template-rows: 200px 100px;
-        padding: 10px;
+        padding: 50px;
     }
     footer section.main div.hr {
         grid-column: span 4;
     }
 }
-
+/* media screen for  screen below 1280px */
 @media screen and (min-width: 1280px) {
     main section.package section.main {
         grid-template-columns: repeat(3, 367px);

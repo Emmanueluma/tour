@@ -1,25 +1,26 @@
-let searchBtn = document.getElementById('search-btn');
-let form = document.getElementById('form');
-let loginForm = document.getElementById('loginSection');
-let loginBtn = document.getElementById('login-btn');
-let mainLoginForm = document.getElementById('loginForm');
-let searchBtn1 = document.getElementById('search-btn1');
-let menuBar = document.getElementById('menu-bar');
-let ul = document.getElementById('ul');
-let links = document.getElementsByClassName('a');
-let v1 = document.getElementById('one');
-let v2 = document.getElementById('two');
-let v3 = document.getElementById('third');
-let v4 = document.getElementById('fourth');
-let v5 = document.getElementById('fifth');
-let videoBg = document.getElementById('videoBg');
+let searchBtn, form, loginForm, loginBtn, mainLoginForm, searchBtn1, menuBar, ul, links, v1, v2, v3, v4, v5, videoBg, bodyMain;
+bodyMain = document.getElementById('body');
+searchBtn = document.getElementById('search-btn');
+form = document.getElementById('form');
+loginForm = document.getElementById('loginSection');
+loginBtn = document.getElementById('login-btn');
+mainLoginForm = document.getElementById('loginForm');
+searchBtn1 = document.getElementById('search-btn1');
+menuBar = document.getElementById('menu-bar');
+ul = document.getElementById('ul');
+links = document.getElementsByClassName('a');
+v1 = document.getElementById('one');
+v2 = document.getElementById('two');
+v3 = document.getElementById('third');
+v4 = document.getElementById('fourth');
+v5 = document.getElementById('fifth');
+videoBg = document.getElementById('videoBg');
 
 
 form.style.height = '0px';
 form.style.opacity = 0;
 
 searchBtn.addEventListener('click', e => {
-    console.log('hello');
     let height = form.style.height;
     if (height == '0px') {
         searchBtn.classList.remove('fa-search');
@@ -58,6 +59,10 @@ loginBtn.addEventListener('click', e => {
         mainLoginForm.style.display = "none";
     }
 });
+
+
+
+
 
 ul.style.height = '0vh';
 ul.style.opacity = 0;
