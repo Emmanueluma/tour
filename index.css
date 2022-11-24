@@ -32,6 +32,7 @@ body {
 }
 button {
     cursor: pointer;
+     border-radius: 5px;
 }
 header {
     background-color: var(--dark);
@@ -546,9 +547,6 @@ main section.services section.main div.text {
     flex-direction: column;
     cursor: pointer;
     transition: .47s;
-}
-main section.services section.main div.text:hover {
-    background-color: var(--white);
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, .1);
 }
 main section.services section.main div.text i {
@@ -798,7 +796,7 @@ footer section.main {
     background-color: var(--dark);
     display: grid;
     grid-template-columns: 337px;
-    grid-template-rows: repeat(2, 200px) 250px repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px) 250px repeat(2, 200px);
     justify-content: center;
     align-items: start;
     padding-top: 30px;
@@ -863,12 +861,6 @@ footer section.main div hr {
         grid-template-columns: 90%;
     }
 }
-/* media screen for  screen below 350px */
-@media screen and (min-width: 350px) {
-    main section .header p span{
-        padding: 3px 9px;
-    }
-}
 /* media screen for  screen below 600px */
 @media screen and (min-width: 600px) {
     main section .header p span{
@@ -898,9 +890,16 @@ footer section.main div hr {
     main section.contact div.main div {
         min-width: 50%;
     }
-    
     main section.package section.main div.container {
         width: 100%;
+        transition: .4s;
+    }
+    main section.package section.main div.container:hover {
+        box-shadow: 0 0 1.7rem rgba(0,0,0,.3);;
+    }
+    main section.services section.main div.text:hover {
+        background-color: var(--white);
+        box-shadow: 0 0 5px 3px rgba(0, 0, 0, .2);
     }
     main section.services section.main div.text {
         width: 100%;
@@ -910,6 +909,9 @@ footer section.main div hr {
     }
     main section.review div.container section.box {
         min-width: 380px; 
+    }
+    footer section.main div {
+        text-align: center;
     }
 }
 /* media screen for  screen below 730px */

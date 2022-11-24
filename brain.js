@@ -64,19 +64,39 @@ loginBtn.addEventListener('click', e => {
 
 
 
+
 ul.style.height = '0vh';
 ul.style.opacity = 0;
+for (let i = 0; i < links.length; i++) {
+    links[i].style.display = "none";
+}
 menuBar.addEventListener('click', e => {
     if (ul.style.height == '50vh') {
         menuBar.classList.add('fa-bars');
         menuBar.classList.remove('fa-times');
         ul.style.height = '0vh';
         ul.style.opacity = 0;
+        for (let i = 0; i < links.length; i++) {
+            links[i].style.display = "none";
+        }
+        
+        
     }else {
         menuBar.classList.remove('fa-bars');
         menuBar.classList.add('fa-times');
         ul.style.height = '50vh';
         ul.style.opacity = 1;
+        for (let i = links.length -1; i => links.length; i--) {
+            if(i == -1) {break;}
+            links[i].style.display = "inline";
+            links[i].addEventListener('click', e => {
+                menuBar.classList.add('fa-bars');
+                menuBar.classList.remove('fa-times');
+                ul.style.height = '0vh';
+                ul.style.opacity = 0;
+            });
+        }
+        
     }
 })
 
@@ -103,7 +123,3 @@ function vi(video,number) {
         video.classList.toggle('active');
     });
 }
-
-
-
-
