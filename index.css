@@ -58,6 +58,7 @@ header nav {
     position: fixed;
     top: 0;
     left: 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
 }
 header nav #menu-bar {
     border: 2px solid var(--white);
@@ -548,6 +549,7 @@ main section.services section.main div.text {
     cursor: pointer;
     transition: .47s;
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, .1);
+    padding: 5px;
 }
 main section.services section.main div.text i {
     font-size: 4rem;
@@ -603,6 +605,7 @@ main section.gallery section.main div.box div.ab {
     opacity: 0;
     transition: .45s;
     color: var(--white);
+    padding: 5px;
 }
 main section.gallery section.main div.box:hover div.ab {
     opacity: 1;
